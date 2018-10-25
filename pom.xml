@@ -853,4 +853,12 @@
       </releases>
     </repository>
   </repositories>
+
+  <distributionManagement>
+    <repository>
+      <id>prunus</id>
+      <name>SWITCHcast Operations</name>
+      <url>file:///srv/www/maven2</url>
+    </repository>
+  </distributionManagement>
 </project>
