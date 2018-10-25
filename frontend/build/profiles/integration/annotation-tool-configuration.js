@@ -61,8 +61,15 @@ define(["jquery",
         // Initiate loading the video metadata from Opencast
         var mediaPackageId = util.queryParameters.id;
         $.support.cors = true;
+        // SWITCH Crude hack to redirect search requests to the right place.
+        //   This is only necessary for the current testing phase
+        var searchHost = '';
+        var domain = window.location.hostname.split('.').slice(-2);
+        if (domain.length === 2 && domain[0] === "switch" && domain[1] === "ch") {
+            searchHost = "https://switch-ch.presentation.cast-test.switch.ch";
+        }
         var searchResult = $.ajax({
-            url: "/search/episode.json",
+            url: searchHost + "/search/episode.json",
             crossDomain: true,
             data: "id=" + mediaPackageId + "&limit=1",
             dataType: "json"
