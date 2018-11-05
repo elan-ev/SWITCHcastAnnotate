@@ -64,9 +64,11 @@ define(["jquery",
         // SWITCH Crude hack to redirect search requests to the right place.
         //   This is only necessary for the current testing phase
         var searchHost = '';
-        var domain = window.location.hostname.split('.').slice(-2);
+        var hostParts = window.location.hostname.split('.');
+        var domain = hostParts.slice(-2);
         if (domain.length === 2 && domain[0] === "switch" && domain[1] === "ch") {
-            searchHost = "https://switch-ch.presentation.cast-test.switch.ch";
+            hostParts[1] = "presentation";
+            searchHost = "https://" + hostParts.join('.');
         }
         var searchResult = $.ajax({
             url: searchHost + "/search/episode.json",
