@@ -197,6 +197,28 @@
           <aggregate>true</aggregate>
         </configuration>
       </plugin>
+      <plugin>
+        <groupId>com.github.github</groupId>
+        <artifactId>site-maven-plugin</artifactId>
+        <version>0.10</version>
+        <configuration>
+          <repositoryOwner>elan-ev</repositoryOwner>
+          <repositoryName>SWITCHcastAnnotate</repositoryName>
+          <branch>refs/heads/m2</branch>
+          <outputDirectory>${project.build.directory}/m2</outputDirectory>
+          <message>Maven artifacts for ${project.version}</message>
+          <merge>true</merge>
+          <oauth2Token>${GITHUB_DEPLOY_TOKEN}</oauth2Token>
+        </configuration>
+        <executions>
+          <execution>
+            <goals>
+              <goal>site</goal>
+            </goals>
+            <phase>deploy</phase>
+          </execution>
+        </executions>
+      </plugin>
     </plugins>
     <!-- This defines the global plugin configurations. Plugins with configuration
       shared across multiple child poms should be configured here, and then referenced
@@ -856,9 +878,9 @@
 
   <distributionManagement>
     <repository>
-      <id>prunus</id>
-      <name>SWITCHcast Operations</name>
-      <url>file:///srv/www/maven2</url>
+      <id>internal.repo</id>
+      <name>Temporary Staging Repository</name>
+      <url>file://${project.build.directory}/m2</url>
     </repository>
   </distributionManagement>
 </project>
