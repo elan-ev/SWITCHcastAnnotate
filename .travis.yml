@@ -1,6 +1,18 @@
 language: java
 jdk: openjdk8
-script: mvn deploy -DskipTests -DGITHUB_DEPLOY_TOKEN="$GITHUB_DEPLOY_TOKEN"
+
+
+before_install:
+  - shopt -s expand_aliases
+  - alias mvn='mvn --batch-mode -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn'
+
+script:
+  - mvn deploy -DskipTests -DGITHUB_DEPLOY_TOKEN="$GITHUB_DEPLOY_TOKEN"
+
+before_cache:
+  - rm -rf ~/.m2/repository/org/opencast/*annotation*
+  - sudo chown -R travis:travis ~/.m2 ~/.cache/pip docs/guides/node_modules/
+
 cache:
   directories:
     - $HOME/.m2
