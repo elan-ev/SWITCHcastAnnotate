@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata modelVersion="1.1.0">
+  <groupId>ch.switch.cast.annotate</groupId>
+  <artifactId>api</artifactId>
+  <version>3-SNAPSHOT</version>
+  <versioning>
+    <snapshot>
+      <timestamp>20190710.135531</timestamp>
+      <buildNumber>1</buildNumber>
+    </snapshot>
+    <lastUpdated>20190710135531</lastUpdated>
+    <snapshotVersions>
+      <snapshotVersion>
+        <extension>jar</extension>
+        <value>3-20190710.135531-1</value>
+        <updated>20190710135531</updated>
+      </snapshotVersion>
+      <snapshotVersion>
+        <extension>pom</extension>
+        <value>3-20190710.135531-1</value>
+        <updated>20190710135531</updated>
+      </snapshotVersion>
+    </snapshotVersions>
+  </versioning>
+</metadata>
