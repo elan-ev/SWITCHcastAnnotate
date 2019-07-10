@@ -3,9 +3,10 @@
   <groupId>ch.switch.cast.annotate</groupId>
   <artifactId>impl</artifactId>
   <versioning>
+    <release>17</release>
     <versions>
-      <version>3-SNAPSHOT</version>
+      <version>17</version>
     </versions>
-    <lastUpdated>20190710135549</lastUpdated>
+    <lastUpdated>20190710144211</lastUpdated>
   </versioning>
 </metadata>
