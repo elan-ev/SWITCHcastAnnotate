@@ -3,10 +3,9 @@
   <groupId>ch.switch.cast.annotate</groupId>
   <artifactId>karaf-feature</artifactId>
   <versioning>
-    <release>19</release>
     <versions>
-      <version>19</version>
+      <version>0-SNAPSHOT</version>
     </versions>
-    <lastUpdated>20190712081122</lastUpdated>
+    <lastUpdated>20190712082300</lastUpdated>
   </versioning>
 </metadata>
