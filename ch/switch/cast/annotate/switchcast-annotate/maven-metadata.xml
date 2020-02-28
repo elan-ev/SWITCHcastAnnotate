@@ -3,10 +3,10 @@
   <groupId>ch.switch.cast.annotate</groupId>
   <artifactId>switchcast-annotate</artifactId>
   <versioning>
-    <release>52</release>
+    <release>53</release>
     <versions>
-      <version>52</version>
+      <version>53</version>
     </versions>
-    <lastUpdated>20200212150752</lastUpdated>
+    <lastUpdated>20200228163608</lastUpdated>
   </versioning>
 </metadata>
